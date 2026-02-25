@@ -13,7 +13,7 @@ app.use(express.json());
 
 const kafka = new Kafka({
   clientId: "payment-service",
-  brokers: ["localhost:9094", "localhost:9095", "localhost:9096"],
+  brokers: ["kafka-1:19092", "kafka-2:19093", "kafka-3:19094"],
 });
 
 const producer = kafka.producer();
